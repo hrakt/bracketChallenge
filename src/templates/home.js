@@ -1,10 +1,11 @@
 import React from "react";
-import {graphql} from graphql;
+import { graphql } from "gatsby";
 import Nav from "../components/Nav/index";
 import Hero from "../components/Hero/index";
 import Carousel from "../components/Carousel/index";
 
 const Home = ({ data }) => {
+  console.log(data);
   return (
     <main>
       <Nav />
@@ -17,23 +18,16 @@ const Home = ({ data }) => {
 export default Home;
 
 export const pageQuery = graphql`
-  query($slug: String!) {
-    contentfulPage(slug: { eq: $slug }) {
-      heading
-      subheading
-      slug
-      description {
-        content {
-          content {
-            value
-          }
-        }
-      }
+  query pageQuery($id: String!) {
+    contentfulPage(id: { eq: $id }) {
+      id
+      title
       image {
         file {
           url
+          fileName
         }
       }
     }
   }
-`
+`;
