@@ -18,7 +18,7 @@ const Button = ({ children, theme, className }) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M1 9L5 5L1 1" stroke="white" stroke-width="2" />
+          <path d="M1 9L5 5L1 1" stroke="white" strokeWidth="2" />
         </svg>
       </div>
     </div>

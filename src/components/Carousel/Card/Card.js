@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Card.module.scss";
 
 const Card = ({ content }) => {
-  console.log(content);
   return (
     <div className={styles.card}>
       <div className={styles.imgWrap}></div>
@@ -19,7 +18,7 @@ const Card = ({ content }) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M1 9L5 5L1 1" stroke="black" stroke-width="2" />
+              <path d="M1 9L5 5L1 1" stroke="black" strokeWidth="2" />
             </svg>
           </div>
         </div>
