@@ -9,7 +9,7 @@ const Card = ({ content }) => {
         <div className={styles.heading}>{content.header}</div>
         <div className={styles.subHeading}>{content.subHead}</div>
         <div className={styles.cta}>
-          <a href={content.cta.link}>{content.cta.title}</a>
+          <a href="/">Learn More</a>
           <div className={styles.arrow}>
             <svg
               width="7"

@@ -3,22 +3,20 @@ import styles from "./Hero.module.scss";
 
 import Button from "../Button/index";
 
-const Hero = () => {
+const Hero = ({ data }) => {
   return (
     <div className={styles.hero}>
-      <div className={styles.heading1}>
-        AMERICA’S #1 RATED ADVENTURE PLATFORM
-      </div>
-      <div className={styles.heading2}>
-        <div>Take control of</div>
-        <div>your weekends</div>
-      </div>
-      <div className={styles.subHeading}>Find adventure anywhere.</div>
+      <div className={styles.heading1}>{data.heading1}</div>
+      <div className={styles.heading2}>{data.heading2}</div>
+      <div className={styles.subHeading}>{data.subHeading}</div>
       <div className={styles.buttonWrap}>
-        <Button theme="blue" className={styles.button}>
-          Get Started
-        </Button>
-        <Button>Request a demo</Button>
+        {data.buttons.map((button, key) => {
+          return (
+            <Button theme={button.theme} key={key}>
+              {button.text}
+            </Button>
+          );
+        })}
       </div>
     </div>
   );

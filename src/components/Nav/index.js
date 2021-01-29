@@ -3,10 +3,13 @@ import styles from "./Nav.module.scss";
 
 import Button from "../Button/index";
 
-const Nav = () => {
+const Nav = ({ data }) => {
+  console.log(data);
   return (
     <div className={styles.nav}>
-      <div className={styles.logoWrap}></div>
+      <div className={styles.logoWrap}>
+        <img></img>
+      </div>
       <div className={styles.navWrap}>
         <ul>
           <li className={styles.navItem}>What's Included?</li>
