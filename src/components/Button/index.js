@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Button.module.scss";
 import cx from "classnames";
 
-const Button = ({ children, theme, className }) => {
+const Button = ({ children, theme, className, link }) => {
   return (
     <div
       className={cx(styles.button, className, {
@@ -10,7 +10,7 @@ const Button = ({ children, theme, className }) => {
         [styles.grey]: theme === "grey",
       })}
     >
-      {children}
+      <a href={link}>{children}</a>
       <div className={styles.arrow}>
         <svg
           width="7"

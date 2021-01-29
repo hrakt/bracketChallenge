@@ -6,7 +6,6 @@ import Hero from "../components/Hero/index";
 import Carousel from "../components/Carousel/index";
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   const navData = data.allContentfulPage.nodes[0].nav;
   const heroData = data.allContentfulPage.nodes[0].hero;
   const carousel = data.allContentfulPage.nodes[0].carousel;

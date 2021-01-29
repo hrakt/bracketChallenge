@@ -13,13 +13,13 @@ const Nav = ({ data }) => {
         <ul>
           {data.navItems.map((item, key) => {
             return (
-              <li className={styles.navItem} key={key} href={item.link}>
-                {item.text}
+              <li className={styles.navItem} key={key}>
+                <a href={item.link}>{item.text}</a>
               </li>
             );
           })}
 
-          <Button href={data.button.link} theme={data.button.theme}>
+          <Button theme={data.button.theme} link={data.button.link}>
             {data.button.text}
           </Button>
         </ul>

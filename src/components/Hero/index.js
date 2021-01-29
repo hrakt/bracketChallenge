@@ -17,6 +17,7 @@ const Hero = ({ data }) => {
               theme={button.theme}
               className={cx({ [styles.heroButton]: key === 0 })}
               key={key}
+              link={button.link}
             >
               {button.text}
             </Button>
