@@ -1,11 +1,15 @@
 import React from "react";
 import styles from "./Card.module.scss";
+import cx from "classnames";
+import Img from "gatsby-image";
 
 const Card = ({ content }) => {
+  console.log(content.image.image);
+  const name = content.image.image.title;
   return (
     <div className={styles.card}>
-      <div className={styles.imgWrap}>
-        <img src={content.image.image.file.url} className={styles.img} />
+      <div className={cx(styles.imgWrap, styles[name])}>
+        <img src={content.image.image.fluid.src} />
       </div>
       <div className={styles.textWrap}>
         <div className={styles.heading}>{content.header}</div>
@@ -20,7 +24,7 @@ const Card = ({ content }) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M1 9L5 5L1 1" stroke="black" strokeWidth="2" />
+              <path d="M1 9L5 5L1 1" stroke="currentColor" strokeWidth="2" />
             </svg>
           </div>
         </div>

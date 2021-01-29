@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Hero.module.scss";
+import cx from "classnames";
 
 import Button from "../Button/index";
 
@@ -12,7 +13,11 @@ const Hero = ({ data }) => {
       <div className={styles.buttonWrap}>
         {data.buttons.map((button, key) => {
           return (
-            <Button theme={button.theme} key={key}>
+            <Button
+              theme={button.theme}
+              className={cx({ [styles.heroButton]: key === 0 })}
+              key={key}
+            >
               {button.text}
             </Button>
           );

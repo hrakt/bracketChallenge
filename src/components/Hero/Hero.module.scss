@@ -1,6 +1,8 @@
+@import "../../breakpoints.scss";
+
 .hero {
   font-size: 1.8rem;
-  padding: 3rem 26.5rem;
+  padding: 3rem 10.5rem;
 }
 
 .heading1 {
@@ -23,6 +25,12 @@
   display: flex;
 }
 
-.button {
+.heroButton {
   margin-right: 2.1rem;
+}
+
+@include tablet {
+  .hero {
+    padding: 4rem 26.5rem;
+  }
 }

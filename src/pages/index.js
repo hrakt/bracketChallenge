@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+
 import Nav from "../components/Nav/index";
 import Hero from "../components/Hero/index";
 import Carousel from "../components/Carousel/index";
@@ -68,8 +69,8 @@ export const query = graphql`
           id
           image {
             image {
-              file {
-                url
+              fluid(maxWidth: 220) {
+                src
               }
               title
             }

@@ -1,3 +1,5 @@
+@import "../../../breakpoints.scss";
+
 .card {
   font-size: 1.8rem;
   position: relative;
@@ -7,7 +9,8 @@
   align-items: flex-end;
   background-color: #ffffff;
   color: #000000;
-  margin-right: 3rem;
+  margin-right: 0rem;
+  margin-bottom: 2rem;
   border-radius: 4px;
 }
 
@@ -20,11 +23,31 @@
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateX(80px) translateY(-80px);
 }
-.img {
-  width: 22rem;
-  height: 22rem;
+
+.Chopper {
+  transform: translateX(35px) translateY(-80px);
+  img {
+    width: 18rem;
+    height: 22rem;
+  }
+}
+
+.Device {
+  transform: translateX(80px) translateY(-70px);
+
+  img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+.Headset {
+  transform: translateX(20px) translateY(-80px);
+  img {
+    width: 19.5;
+    height: 22rem;
+  }
 }
 
 .heading {
@@ -39,7 +62,17 @@
 
 .cta {
   display: flex;
+  color: #f65928;
+  font-weight: bold;
+  font-size: 14.4px;
+  line-height: 17px;
 }
 .arrow {
   margin-left: 0.8rem;
+}
+
+@include tablet {
+  .card {
+    margin-right: 3rem;
+  }
 }

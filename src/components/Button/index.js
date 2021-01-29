@@ -7,6 +7,7 @@ const Button = ({ children, theme, className }) => {
     <div
       className={cx(styles.button, className, {
         [styles.blue]: theme === "blue",
+        [styles.grey]: theme === "grey",
       })}
     >
       {children}
