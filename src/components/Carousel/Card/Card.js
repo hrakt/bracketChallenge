@@ -4,7 +4,9 @@ import styles from "./Card.module.scss";
 const Card = ({ content }) => {
   return (
     <div className={styles.card}>
-      <div className={styles.imgWrap}></div>
+      <div className={styles.imgWrap}>
+        <img src={content.image.image.file.url} className={styles.img} />
+      </div>
       <div className={styles.textWrap}>
         <div className={styles.heading}>{content.header}</div>
         <div className={styles.subHeading}>{content.subHead}</div>
