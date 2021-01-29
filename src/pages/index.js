@@ -9,6 +9,7 @@ const IndexPage = ({ data }) => {
   const navData = data.allContentfulPage.nodes[0].nav;
   const heroData = data.allContentfulPage.nodes[0].hero;
   const carousel = data.allContentfulPage.nodes[0].carousel;
+
   const backgroundFluidImageStack = [
     data.allContentfulPage.nodes[0].background.fluid,
     `linear-gradient(
