@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Button.module.scss";
 import cx from "classnames";
+import SvgIcon from "../SvgIcon";
 
 const Button = ({ children, theme, className, link }) => {
   return (
@@ -11,17 +12,7 @@ const Button = ({ children, theme, className, link }) => {
       })}
     >
       <a href={link}>{children}</a>
-      <div className={styles.arrow}>
-        <svg
-          width="7"
-          height="10"
-          viewBox="0 0 7 10"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M1 9L5 5L1 1" stroke="white" strokeWidth="2" />
-        </svg>
-      </div>
+      <SvgIcon icon={"arrow"} className={styles.arrow} />
     </div>
   );
 };
