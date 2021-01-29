@@ -6,6 +6,7 @@ import Hero from "../components/Hero/index";
 import Carousel from "../components/Carousel/index";
 
 const IndexPage = ({ data }) => {
+  console.log(data);
   const navData = data.allContentfulPage.nodes[0].nav;
   const heroData = data.allContentfulPage.nodes[0].hero;
   const carousel = data.allContentfulPage.nodes[0].carousel;
@@ -32,7 +33,7 @@ export default IndexPage;
 
 export const query = graphql`
   query HomeQuery {
-    allContentfulPage {
+    allContentfulPage(filter: { title: { eq: "Home" } }) {
       nodes {
         background {
           fluid(quality: 100, maxWidth: 3400) {
@@ -40,7 +41,6 @@ export const query = graphql`
             ...GatsbyContentfulFluid
           }
         }
-        id
         hero {
           heading1
           heading2
@@ -71,7 +71,6 @@ export const query = graphql`
         }
         title
         carousel {
-          id
           image {
             image {
               fluid(maxWidth: 220) {
