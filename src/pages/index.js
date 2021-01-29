@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-
+import BackgroundImage from "gatsby-background-image";
 import Nav from "../components/Nav/index";
 import Hero from "../components/Hero/index";
 import Carousel from "../components/Carousel/index";
@@ -9,18 +9,22 @@ const IndexPage = ({ data }) => {
   const navData = data.allContentfulPage.nodes[0].nav;
   const heroData = data.allContentfulPage.nodes[0].hero;
   const carousel = data.allContentfulPage.nodes[0].carousel;
-  const background = data.allContentfulPage.nodes[0].background.file.url;
+  const backgroundFluidImageStack = [
+    data.allContentfulPage.nodes[0].background.fluid,
+    `linear-gradient(
+      360deg,
+      #000000 13.96%,
+      rgba(0, 0, 0, 0) 107.34%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%)`,
+  ].reverse();
 
   return (
-    <main
-      style={{
-        backgroundImage: `linear-gradient(360deg, #000000 13.96%, rgba(0, 0, 0, 0) 107.34%), linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%), url(${background}) `,
-      }}
-    >
+    <BackgroundImage Tag="main" fluid={backgroundFluidImageStack}>
       <Nav data={navData} />
       <Hero data={heroData} />
       <Carousel data={carousel} />
-    </main>
+    </BackgroundImage>
   );
 };
 
@@ -31,8 +35,9 @@ export const query = graphql`
     allContentfulPage {
       nodes {
         background {
-          file {
-            url
+          fluid(quality: 100, maxWidth: 3400) {
+            src
+            ...GatsbyContentfulFluid
           }
         }
         id

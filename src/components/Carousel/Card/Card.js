@@ -4,7 +4,6 @@ import cx from "classnames";
 import Img from "gatsby-image";
 
 const Card = ({ content }) => {
-  console.log(content.image.image);
   const name = content.image.image.title;
   return (
     <div className={styles.card}>
