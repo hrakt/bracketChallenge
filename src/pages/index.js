@@ -12,12 +12,7 @@ const IndexPage = ({ data }) => {
 
   const backgroundFluidImageStack = [
     data.allContentfulPage.nodes[0].background.fluid,
-    `linear-gradient(
-      360deg,
-      #000000 13.96%,
-      rgba(0, 0, 0, 0) 107.34%
-    ),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%)`,
+    `linear-gradient(30deg,#000 40%,rgba(0,0,0,.9) 50%,transparent)`,
   ].reverse();
 
   return (

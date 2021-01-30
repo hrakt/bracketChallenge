@@ -2,7 +2,7 @@
 
 .nav {
   font-size: 1.4rem;
-  padding: 4rem 10.5rem;
+  padding: 4rem 2.5rem;
   display: flex;
   justify-content: space-between;
 }
@@ -21,9 +21,15 @@
 
 @include tablet {
   .nav {
-    padding: 4rem 26.5rem;
+    padding: 4rem 10.5rem;
   }
   .navItem {
     display: inline;
+  }
+}
+
+@include desktop {
+  .nav {
+    padding: 4rem 26.5rem;
   }
 }

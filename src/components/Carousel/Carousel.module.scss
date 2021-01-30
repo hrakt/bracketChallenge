@@ -3,12 +3,18 @@
 .carousel {
   display: flex;
   flex-direction: column;
-  padding: 8rem 0 0 10.5rem;
+  padding: 8rem 2.5rem 0 2.5rem;
 }
 
 @include tablet {
   .carousel {
     flex-direction: row;
-    padding: 8rem 0 0 26.5rem;
+    padding: 8rem 10.5rem 0 10.5rem;
+  }
+}
+
+@include desktop {
+  .carousel {
+    padding: 8rem 22.5rem 0 26.5rem;
   }
 }

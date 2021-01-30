@@ -2,7 +2,7 @@
 
 .hero {
   font-size: 1.8rem;
-  padding: 3rem 10.5rem;
+  padding: 3rem 2.5rem;
 }
 
 .heading1 {
@@ -30,6 +30,12 @@
 }
 
 @include tablet {
+  .hero {
+    padding: 4rem 10.5rem;
+  }
+}
+
+@include desktop {
   .hero {
     padding: 4rem 26.5rem;
   }
