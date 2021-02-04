@@ -6,7 +6,7 @@
 
 ``` gatsby develop```
 
-The project is deployed on ```https://sharp-jang-6e6faf.netlify.app/```
+The project is deployed on [Netlify](https://sharp-jang-6e6faf.netlify.app/)
 
 
 
